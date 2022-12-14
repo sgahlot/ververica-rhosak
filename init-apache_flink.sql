@@ -12,11 +12,11 @@ create table customers (
     'scan.startup.mode' = 'earliest-offset',
     'properties.group.id' = 'customers-consumers',
     'format' = 'json',
-    'properties.bootstrap.servers' = 'kafkaHost',
+    'properties.bootstrap.servers' = 'REPLACE_WITH_BOOTSTRAP_SERVER',
     'properties.security.protocol' = 'SASL_SSL',
     'properties.sasl.mechanism' = 'PLAIN',
     'properties.sasl.jaas.config' = 'org.apache.kafka.common.security.plain.PlainLoginModule required
-username="accessKeyID" password="accessKeySecret";'
+username="REPLACE_WITH_CLIENT_ID" password="REPLACE_WITH_CLIENT_SECRET";'
 );
 
 -- Create table for "items" topic
@@ -29,11 +29,11 @@ create table items (
     'scan.startup.mode' = 'earliest-offset',
     'properties.group.id' = 'items-consumers',
     'format' = 'json',
-    'properties.bootstrap.servers' = 'kafkaHost',
+    'properties.bootstrap.servers' = 'REPLACE_WITH_BOOTSTRAP_SERVER',
     'properties.security.protocol' = 'SASL_SSL',
     'properties.sasl.mechanism' = 'PLAIN',
     'properties.sasl.jaas.config' = 'org.apache.kafka.common.security.plain.PlainLoginModule required
-username="accessKeyID" password="accessKeySecret";'
+username="REPLACE_WITH_CLIENT_ID" password="REPLACE_WITH_CLIENT_SECRET";'
 );
 
 -- Create table for "orders" topic
@@ -47,11 +47,11 @@ create table orders (
     'scan.startup.mode' = 'earliest-offset',
     'properties.group.id' = 'orders-consumers',
     'format' = 'json',
-    'properties.bootstrap.servers' = 'kafkaHost',
+    'properties.bootstrap.servers' = 'REPLACE_WITH_BOOTSTRAP_SERVER',
     'properties.security.protocol' = 'SASL_SSL',
     'properties.sasl.mechanism' = 'PLAIN',
     'properties.sasl.jaas.config' = 'org.apache.kafka.common.security.plain.PlainLoginModule required
-username="accessKeyID" password="accessKeySecret";'
+username="REPLACE_WITH_CLIENT_ID" password="REPLACE_WITH_CLIENT_SECRET";'
 );
 
 --show tables;
